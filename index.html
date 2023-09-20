@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Workers Playground</title>
+    <style>
+        html, body {
+            font-family: sans-serif;
+        }
+        li {
+            margin-bottom: 1.2em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Web Workers Playground</h1>
+<ol>
+    <li>Play with the counter (it should work normally)</li>
+    <li>Click on <button id="btn-long-task-without-worker">Run long task WITHOUT web worker</button> and try to interact again with the counter (UI should be "freezed"
+        until the long task ends)
+    </li>
+    <li>Now click on <button id="btn-start-web-worker">Start Web Worker</button></li>
+    <li>and click on <button id="btn-long-task-with-worker">Run long task WITH web worker</button></li>
+    <li>Try to interact with the counter (UI should work as expected)</li>
+    <li>NB: You can always click on <button id="btn-stop-web-worker">Stop Web Worker</button> when you want to stop its execution (and all its running tasks).</li>
+</ol>
+
+<h3>Counter</h3>
+<span id="counter-value">0</span>
+<button id="btn-decrement">-</button>
+<button id="btn-increment">+</button>
+
+<br>
+<hr>
+
+<h3>Messages <button id="btn-clear-messages">Clear messages</button></h3>
+
+<ul id="messages"></ul>
+
+<script src="index.js"></script>
+</body>
+</html>
